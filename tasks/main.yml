@@ -1,0 +1,28 @@
+---
+
+# Install
+- import_tasks: install.yml
+  tags:
+    - manala_elasticsearch
+
+# Config
+- import_tasks: config.yml
+  tags:
+    - manala_elasticsearch
+
+# Environment
+- include: environment.yml
+  tags:
+    - manala_elasticsearch
+
+# Services
+- import_tasks: services.yml
+  tags:
+    - manala_elasticsearch
+    - manala_elasticsearch.services
+    - manala.services
+
+# Plugins
+- import_tasks: plugins.yml
+  tags:
+    - manala_elasticsearch
